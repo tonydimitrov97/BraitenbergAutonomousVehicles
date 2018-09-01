@@ -1,0 +1,107 @@
+\hypertarget{class_motion_handler_robot}{}\section{Motion\+Handler\+Robot Class Reference}
+\label{class_motion_handler_robot}\index{Motion\+Handler\+Robot@{Motion\+Handler\+Robot}}
+
+
+Class managing a \mbox{\hyperlink{class_robot}{Robot}}\textquotesingle{}s speed and heading angle foodd on collisions and user inputs.  
+
+
+
+
+{\ttfamily \#include $<$motion\+\_\+handler\+\_\+robot.\+h$>$}
+
+Inheritance diagram for Motion\+Handler\+Robot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_motion_handler_robot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_motion_handler_robot_a000adbb625eb8954e648d0f14afa7b12}\label{class_motion_handler_robot_a000adbb625eb8954e648d0f14afa7b12}} 
+\mbox{\hyperlink{class_motion_handler_robot_a000adbb625eb8954e648d0f14afa7b12}{Motion\+Handler\+Robot}} (\mbox{\hyperlink{class_arena_mobile_entity}{Arena\+Mobile\+Entity}} $\ast$ent, Behavior behavior)
+\begin{DoxyCompactList}\small\item\em Explicit value constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_motion_handler_robot_a66445cc9057e3ef9298b5bd239df6d4e}\label{class_motion_handler_robot_a66445cc9057e3ef9298b5bd239df6d4e}} 
+\mbox{\hyperlink{class_motion_handler_robot_a66445cc9057e3ef9298b5bd239df6d4e}{Motion\+Handler\+Robot}} (const \mbox{\hyperlink{class_motion_handler_robot}{Motion\+Handler\+Robot}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_motion_handler_robot_a48181f197ffb864f16e29721ad964e4a}\label{class_motion_handler_robot_a48181f197ffb864f16e29721ad964e4a}} 
+\mbox{\hyperlink{class_motion_handler_robot}{Motion\+Handler\+Robot}} \& \mbox{\hyperlink{class_motion_handler_robot_a48181f197ffb864f16e29721ad964e4a}{operator=}} (const \mbox{\hyperlink{class_motion_handler_robot}{Motion\+Handler\+Robot}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Default assignment operator overload. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_handler_robot_aba3ad202a5dc1cf13dc1a82308776ecf}{Update\+Velocity}} (double left\+\_\+reading, double right\+\_\+reading) override
+\begin{DoxyCompactList}\small\item\em Set the speed of both wheels based upon the robots proximity to the light. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_handler_robot_a2afe4dbe1eb88998442f6f41ce8f0c2c}{Update\+Velocity}} (double left\+\_\+light\+\_\+reading, double right\+\_\+light\+\_\+reading, double left\+\_\+food\+\_\+reading, double right\+\_\+food\+\_\+reading) override
+\begin{DoxyCompactList}\small\item\em Set the speed of both wheels based upon the robots proximity to the food and the light. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motion_handler_robot_accf55d58d0ddae44c4e054f7784b9e9a}{set\+\_\+behavior}} (Behavior behavior)
+\begin{DoxyCompactList}\small\item\em Set the type of braitenberg vehicle based upon the behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class managing a \mbox{\hyperlink{class_robot}{Robot}}\textquotesingle{}s speed and heading angle foodd on collisions and user inputs. 
+
+Currently, both wheels are always going at maximum speed, and cannot be controlled independently. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_motion_handler_robot_accf55d58d0ddae44c4e054f7784b9e9a}\label{class_motion_handler_robot_accf55d58d0ddae44c4e054f7784b9e9a}} 
+\index{Motion\+Handler\+Robot@{Motion\+Handler\+Robot}!set\+\_\+behavior@{set\+\_\+behavior}}
+\index{set\+\_\+behavior@{set\+\_\+behavior}!Motion\+Handler\+Robot@{Motion\+Handler\+Robot}}
+\subsubsection{\texorpdfstring{set\+\_\+behavior()}{set\_behavior()}}
+{\footnotesize\ttfamily void Motion\+Handler\+Robot\+::set\+\_\+behavior (\begin{DoxyParamCaption}\item[{Behavior}]{behavior }\end{DoxyParamCaption})}
+
+
+
+Set the type of braitenberg vehicle based upon the behavior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em behavior} & -\/ The way the robot will move based upon the entities \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motion_handler_robot_aba3ad202a5dc1cf13dc1a82308776ecf}\label{class_motion_handler_robot_aba3ad202a5dc1cf13dc1a82308776ecf}} 
+\index{Motion\+Handler\+Robot@{Motion\+Handler\+Robot}!Update\+Velocity@{Update\+Velocity}}
+\index{Update\+Velocity@{Update\+Velocity}!Motion\+Handler\+Robot@{Motion\+Handler\+Robot}}
+\subsubsection{\texorpdfstring{Update\+Velocity()}{UpdateVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Motion\+Handler\+Robot\+::\+Update\+Velocity (\begin{DoxyParamCaption}\item[{double}]{left\+\_\+reading,  }\item[{double}]{right\+\_\+reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Set the speed of both wheels based upon the robots proximity to the light. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em left\+\_\+reading} & -\/ reading for the sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+reading} & -\/ reading for the sensor on the right \\
+\hline
+\mbox{\tt out}  & {\em The} & proper wheel velocities \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motion_handler_robot_a2afe4dbe1eb88998442f6f41ce8f0c2c}\label{class_motion_handler_robot_a2afe4dbe1eb88998442f6f41ce8f0c2c}} 
+\index{Motion\+Handler\+Robot@{Motion\+Handler\+Robot}!Update\+Velocity@{Update\+Velocity}}
+\index{Update\+Velocity@{Update\+Velocity}!Motion\+Handler\+Robot@{Motion\+Handler\+Robot}}
+\subsubsection{\texorpdfstring{Update\+Velocity()}{UpdateVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Motion\+Handler\+Robot\+::\+Update\+Velocity (\begin{DoxyParamCaption}\item[{double}]{left\+\_\+light\+\_\+reading,  }\item[{double}]{right\+\_\+light\+\_\+reading,  }\item[{double}]{left\+\_\+food\+\_\+reading,  }\item[{double}]{right\+\_\+food\+\_\+reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Set the speed of both wheels based upon the robots proximity to the food and the light. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em left\+\_\+light\+\_\+reading} & -\/ reading for light sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+light\+\_\+reading} & -\/ reading for light sensor on the right \\
+\hline
+\mbox{\tt in}  & {\em left\+\_\+food\+\_\+reading} & -\/ reading for food sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+food\+\_\+reading} & -\/ reading for food sensor on the right \\
+\hline
+\mbox{\tt out}  & {\em The} & proper wheel velocities \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{motion__handler__robot_8h}{motion\+\_\+handler\+\_\+robot.\+h}}\item 
+src/\mbox{\hyperlink{motion__handler__robot_8cc}{motion\+\_\+handler\+\_\+robot.\+cc}}\end{DoxyCompactItemize}

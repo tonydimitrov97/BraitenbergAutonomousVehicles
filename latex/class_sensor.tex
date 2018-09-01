@@ -1,0 +1,129 @@
+\hypertarget{class_sensor}{}\section{Sensor Class Reference}
+\label{class_sensor}\index{Sensor@{Sensor}}
+
+
+Parent class for both of the sensors a robot can have.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+Inheritance diagram for Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sensor_a342d6d11ef572c8cba92cb76fb1a294b}\label{class_sensor_a342d6d11ef572c8cba92cb76fb1a294b}} 
+\mbox{\hyperlink{class_sensor_a342d6d11ef572c8cba92cb76fb1a294b}{Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a387919f060b66074dbd107ed1764f8f6}\label{class_sensor_a387919f060b66074dbd107ed1764f8f6}} 
+virtual \mbox{\hyperlink{class_sensor_a387919f060b66074dbd107ed1764f8f6}{$\sim$\+Sensor}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sensor_aab7f1f9c804ab9b05eaaa19f93b2dff7}{Calc\+Distance}} (\mbox{\hyperlink{struct_pose}{Pose}} sensor\+\_\+pose, \mbox{\hyperlink{struct_pose}{Pose}} entity\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em Calculates the distance between two entities. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_sensor_a8415ca43d21e24dc72481bbf1f308e5c}{Notify}} (\mbox{\hyperlink{common_8h_a2e3484535ee610c8e19e9859563abe48}{\+\_\+\+\_\+unused}} \mbox{\hyperlink{struct_pose}{Pose}} entity\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em Gives a sensor reading based upon the position passed in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a5e6ad1aa7b2c48e59851e03404dacbde}\label{class_sensor_a5e6ad1aa7b2c48e59851e03404dacbde}} 
+virtual void \mbox{\hyperlink{class_sensor_a5e6ad1aa7b2c48e59851e03404dacbde}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the position and the sensor reading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a6ef17b207fce459422bee2410ec15c65}\label{class_sensor_a6ef17b207fce459422bee2410ec15c65}} 
+\mbox{\hyperlink{class_sensor}{Sensor}} \& \mbox{\hyperlink{class_sensor_a6ef17b207fce459422bee2410ec15c65}{operator=}} (\mbox{\hyperlink{common_8h_a2e3484535ee610c8e19e9859563abe48}{\+\_\+\+\_\+unused}} const \mbox{\hyperlink{class_sensor}{Sensor}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Under certain circumstance, the compiler requires that the assignment operator is not defined. This {\ttfamily deletes} the default assignment operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_af2e786d46a120c438bceb25a27bcbf6c}\label{class_sensor_af2e786d46a120c438bceb25a27bcbf6c}} 
+\mbox{\hyperlink{class_sensor_af2e786d46a120c438bceb25a27bcbf6c}{Sensor}} (\mbox{\hyperlink{common_8h_a2e3484535ee610c8e19e9859563abe48}{\+\_\+\+\_\+unused}} const \mbox{\hyperlink{class_sensor}{Sensor}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Under certain circumstance, the compiler requires that the copy constructor is not defined. This {\ttfamily deletes} the default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a625b6e47344cd827fac400e853240331}\label{class_sensor_a625b6e47344cd827fac400e853240331}} 
+void \mbox{\hyperlink{class_sensor_a625b6e47344cd827fac400e853240331}{set\+\_\+reading}} (double reading)
+\begin{DoxyCompactList}\small\item\em Set the reading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a5276b83e9c880ef379fe9b08293e61cf}\label{class_sensor_a5276b83e9c880ef379fe9b08293e61cf}} 
+double \mbox{\hyperlink{class_sensor_a5276b83e9c880ef379fe9b08293e61cf}{get\+\_\+reading}} ()
+\begin{DoxyCompactList}\small\item\em Return the reading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a2d82072c0e2cb2e4663993eea261ea5f}\label{class_sensor_a2d82072c0e2cb2e4663993eea261ea5f}} 
+void \mbox{\hyperlink{class_sensor_a2d82072c0e2cb2e4663993eea261ea5f}{set\+\_\+pose}} (\mbox{\hyperlink{struct_pose}{Pose}} pose)
+\begin{DoxyCompactList}\small\item\em Set the sensor position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_afa533b8d8bb5f3787682ffc5ab8c989c}\label{class_sensor_afa533b8d8bb5f3787682ffc5ab8c989c}} 
+\mbox{\hyperlink{struct_pose}{Pose}} \mbox{\hyperlink{class_sensor_afa533b8d8bb5f3787682ffc5ab8c989c}{get\+\_\+pose}} ()
+\begin{DoxyCompactList}\small\item\em Return the sensor position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_acb2c03838972a6bd717cd61866ab4a80}\label{class_sensor_acb2c03838972a6bd717cd61866ab4a80}} 
+void \mbox{\hyperlink{class_sensor_acb2c03838972a6bd717cd61866ab4a80}{set\+\_\+robot}} (\mbox{\hyperlink{class_robot}{Robot}} $\ast$robot)
+\begin{DoxyCompactList}\small\item\em Set the robot the sensor references. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_ab2e0b1dd3ec3f9582c6643a77e2e29fd}\label{class_sensor_ab2e0b1dd3ec3f9582c6643a77e2e29fd}} 
+\mbox{\hyperlink{class_robot}{Robot}} $\ast$ \mbox{\hyperlink{class_sensor_ab2e0b1dd3ec3f9582c6643a77e2e29fd}{get\+\_\+robot}} ()
+\begin{DoxyCompactList}\small\item\em Return the robot reference. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_a75ccd0eec457119294947a13282516c8}\label{class_sensor_a75ccd0eec457119294947a13282516c8}} 
+void {\bfseries set\+\_\+sensitivity} (float sensitivity)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sensor_a60d8923d0fab719c4693bab0798bdd1c}\label{class_sensor_a60d8923d0fab719c4693bab0798bdd1c}} 
+float {\bfseries sensitivity\+\_\+} \{1200\}
+\item 
+\mbox{\Hypertarget{class_sensor_aa730542e905a7e0256eb987a06349078}\label{class_sensor_aa730542e905a7e0256eb987a06349078}} 
+\mbox{\hyperlink{class_robot}{Robot}} $\ast$ {\bfseries robot\+\_\+}
+\item 
+\mbox{\Hypertarget{class_sensor_ad060f21909f3e4f5dfd310cb2fa52000}\label{class_sensor_ad060f21909f3e4f5dfd310cb2fa52000}} 
+\mbox{\hyperlink{struct_pose}{Pose}} {\bfseries pose\+\_\+}
+\item 
+\mbox{\Hypertarget{class_sensor_ad71b1c465eae9ddf1da31cff1cbe3736}\label{class_sensor_ad71b1c465eae9ddf1da31cff1cbe3736}} 
+double {\bfseries reading\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Parent class for both of the sensors a robot can have. 
+
+Light\+Sensors are what detect the proximity of the robot to the light. They make sure the robot follows its behavior
+
+The Light\+Sensors get notified by light and create readings based upon their proximity to the light.
+
+Food\+Sensors are what detect the proximity of the robot to the food. They make sure the robot does not starve
+
+The Food\+Sensors get notified by food and create readings based upon their proximity to the food. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sensor_aab7f1f9c804ab9b05eaaa19f93b2dff7}\label{class_sensor_aab7f1f9c804ab9b05eaaa19f93b2dff7}} 
+\index{Sensor@{Sensor}!Calc\+Distance@{Calc\+Distance}}
+\index{Calc\+Distance@{Calc\+Distance}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{Calc\+Distance()}{CalcDistance()}}
+{\footnotesize\ttfamily double Sensor\+::\+Calc\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pose}{Pose}}}]{sensor\+\_\+pose,  }\item[{\mbox{\hyperlink{struct_pose}{Pose}}}]{entity\+\_\+pose }\end{DoxyParamCaption})}
+
+
+
+Calculates the distance between two entities. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sensor\+\_\+pose} & -\/ Position of the sensor \\
+\hline
+\mbox{\tt in}  & {\em entity\+\_\+pose} & -\/ Position of the entity \\
+\hline
+\mbox{\tt out}  & {\em returns} & the distance as a double \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sensor_a8415ca43d21e24dc72481bbf1f308e5c}\label{class_sensor_a8415ca43d21e24dc72481bbf1f308e5c}} 
+\index{Sensor@{Sensor}!Notify@{Notify}}
+\index{Notify@{Notify}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily virtual void Sensor\+::\+Notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a2e3484535ee610c8e19e9859563abe48}{\+\_\+\+\_\+unused}} \mbox{\hyperlink{struct_pose}{Pose}}}]{entity\+\_\+pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gives a sensor reading based upon the position passed in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+\_\+pose} & -\/ the entity to base the reading off of \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{sensor_8h}{sensor.\+h}}\item 
+src/\mbox{\hyperlink{sensor_8cc}{sensor.\+cc}}\end{DoxyCompactItemize}

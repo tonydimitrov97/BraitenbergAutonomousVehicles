@@ -1,0 +1,86 @@
+\hypertarget{class_explore}{}\section{Explore Class Reference}
+\label{class_explore}\index{Explore@{Explore}}
+
+
+The class for the robot explore behavior.  
+
+
+
+
+{\ttfamily \#include $<$explore.\+h$>$}
+
+Inheritance diagram for Explore\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_explore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_explore_a8ace99bb96956cb6b4c7d4e32923a843}\label{class_explore_a8ace99bb96956cb6b4c7d4e32923a843}} 
+\mbox{\hyperlink{class_explore_a8ace99bb96956cb6b4c7d4e32923a843}{Explore}} ()
+\begin{DoxyCompactList}\small\item\em Empty default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_explore_a0ef9a84d8be98aedc05cbd05232c4095}\label{class_explore_a0ef9a84d8be98aedc05cbd05232c4095}} 
+virtual \mbox{\hyperlink{class_explore_a0ef9a84d8be98aedc05cbd05232c4095}{$\sim$\+Explore}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} \mbox{\hyperlink{class_explore_aae196c161cfab6179cb7c93722c44937}{Calc\+Wheel\+Velocity}} (double left\+\_\+reading, double right\+\_\+reading) override
+\begin{DoxyCompactList}\small\item\em Determine the speed of both wheels based upon the robots proximity to the light. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} \mbox{\hyperlink{class_explore_aee6c025989c1aef2c76ccaa3db61ace1}{Calc\+Wheel\+Velocity\+W\+Food}} (double left\+\_\+light\+\_\+reading, double right\+\_\+light\+\_\+reading, double left\+\_\+food\+\_\+reading, double right\+\_\+food\+\_\+reading) override
+\begin{DoxyCompactList}\small\item\em Determine the speed of both wheels based upon the robots proximity to the food and the light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class for the robot explore behavior. 
+
+This class inherits from \mbox{\hyperlink{class_braitenberg}{Braitenberg}} and overrides its Calc\+Wheel\+Velocity and Calc\+Wheel\+Velocity\+W\+Food methods. The robot will move quick and avoid light 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_explore_aae196c161cfab6179cb7c93722c44937}\label{class_explore_aae196c161cfab6179cb7c93722c44937}} 
+\index{Explore@{Explore}!Calc\+Wheel\+Velocity@{Calc\+Wheel\+Velocity}}
+\index{Calc\+Wheel\+Velocity@{Calc\+Wheel\+Velocity}!Explore@{Explore}}
+\subsubsection{\texorpdfstring{Calc\+Wheel\+Velocity()}{CalcWheelVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} Explore\+::\+Calc\+Wheel\+Velocity (\begin{DoxyParamCaption}\item[{double}]{left\+\_\+reading,  }\item[{double}]{right\+\_\+reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Determine the speed of both wheels based upon the robots proximity to the light. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em left\+\_\+reading} & -\/ reading for light sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+reading} & -\/ reading for light sensor on the right \\
+\hline
+\mbox{\tt out}  & {\em The} & proper wheel velocities \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_explore_aee6c025989c1aef2c76ccaa3db61ace1}\label{class_explore_aee6c025989c1aef2c76ccaa3db61ace1}} 
+\index{Explore@{Explore}!Calc\+Wheel\+Velocity\+W\+Food@{Calc\+Wheel\+Velocity\+W\+Food}}
+\index{Calc\+Wheel\+Velocity\+W\+Food@{Calc\+Wheel\+Velocity\+W\+Food}!Explore@{Explore}}
+\subsubsection{\texorpdfstring{Calc\+Wheel\+Velocity\+W\+Food()}{CalcWheelVelocityWFood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} Explore\+::\+Calc\+Wheel\+Velocity\+W\+Food (\begin{DoxyParamCaption}\item[{double}]{left\+\_\+light\+\_\+reading,  }\item[{double}]{right\+\_\+light\+\_\+reading,  }\item[{double}]{left\+\_\+food\+\_\+reading,  }\item[{double}]{right\+\_\+food\+\_\+reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Determine the speed of both wheels based upon the robots proximity to the food and the light. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em left\+\_\+light\+\_\+reading} & -\/ reading for light sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+light\+\_\+reading} & -\/ reading for light sensor on the right \\
+\hline
+\mbox{\tt in}  & {\em left\+\_\+food\+\_\+reading} & -\/ reading for food sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+food\+\_\+reading} & -\/ reading for food sensor on the right \\
+\hline
+\mbox{\tt out}  & {\em The} & proper wheel velocities \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{explore_8h}{explore.\+h}}\item 
+src/\mbox{\hyperlink{explore_8cc}{explore.\+cc}}\end{DoxyCompactItemize}

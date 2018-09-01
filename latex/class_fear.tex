@@ -1,0 +1,86 @@
+\hypertarget{class_fear}{}\section{Fear Class Reference}
+\label{class_fear}\index{Fear@{Fear}}
+
+
+The class for the robot fear behavior.  
+
+
+
+
+{\ttfamily \#include $<$fear.\+h$>$}
+
+Inheritance diagram for Fear\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fear}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fear_a2a7cfce798f1b86f73510a62232975f8}\label{class_fear_a2a7cfce798f1b86f73510a62232975f8}} 
+\mbox{\hyperlink{class_fear_a2a7cfce798f1b86f73510a62232975f8}{Fear}} ()
+\begin{DoxyCompactList}\small\item\em Empty default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fear_a571e48276ff3e227caf1d2d3445ed100}\label{class_fear_a571e48276ff3e227caf1d2d3445ed100}} 
+virtual \mbox{\hyperlink{class_fear_a571e48276ff3e227caf1d2d3445ed100}{$\sim$\+Fear}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} \mbox{\hyperlink{class_fear_a17242c34a557281ad98d37073f590c45}{Calc\+Wheel\+Velocity}} (double left\+\_\+reading, double right\+\_\+reading) override
+\begin{DoxyCompactList}\small\item\em Determine the speed of both wheels based upon the robots proximity to the light. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} \mbox{\hyperlink{class_fear_a24a9b3c3dec205cb973eb15416795129}{Calc\+Wheel\+Velocity\+W\+Food}} (double left\+\_\+light\+\_\+reading, double right\+\_\+light\+\_\+reading, double left\+\_\+food\+\_\+reading, double right\+\_\+food\+\_\+reading) override
+\begin{DoxyCompactList}\small\item\em Determine the speed of both wheels based upon the robots proximity to the food and the light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class for the robot fear behavior. 
+
+This class inherits from \mbox{\hyperlink{class_braitenberg}{Braitenberg}} and overrides its Calc\+Wheel\+Velocity and Calc\+Wheel\+Velocity\+W\+Food methods. The robot will move slowly and avoid light when it is near 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fear_a17242c34a557281ad98d37073f590c45}\label{class_fear_a17242c34a557281ad98d37073f590c45}} 
+\index{Fear@{Fear}!Calc\+Wheel\+Velocity@{Calc\+Wheel\+Velocity}}
+\index{Calc\+Wheel\+Velocity@{Calc\+Wheel\+Velocity}!Fear@{Fear}}
+\subsubsection{\texorpdfstring{Calc\+Wheel\+Velocity()}{CalcWheelVelocity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} Fear\+::\+Calc\+Wheel\+Velocity (\begin{DoxyParamCaption}\item[{double}]{left\+\_\+reading,  }\item[{double}]{right\+\_\+reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Determine the speed of both wheels based upon the robots proximity to the light. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em left\+\_\+reading} & -\/ reading for light sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+reading} & -\/ reading for light sensor on the right \\
+\hline
+\mbox{\tt out}  & {\em The} & proper wheel velocities \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fear_a24a9b3c3dec205cb973eb15416795129}\label{class_fear_a24a9b3c3dec205cb973eb15416795129}} 
+\index{Fear@{Fear}!Calc\+Wheel\+Velocity\+W\+Food@{Calc\+Wheel\+Velocity\+W\+Food}}
+\index{Calc\+Wheel\+Velocity\+W\+Food@{Calc\+Wheel\+Velocity\+W\+Food}!Fear@{Fear}}
+\subsubsection{\texorpdfstring{Calc\+Wheel\+Velocity\+W\+Food()}{CalcWheelVelocityWFood()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_wheel_velocity}{Wheel\+Velocity}} Fear\+::\+Calc\+Wheel\+Velocity\+W\+Food (\begin{DoxyParamCaption}\item[{double}]{left\+\_\+light\+\_\+reading,  }\item[{double}]{right\+\_\+light\+\_\+reading,  }\item[{double}]{left\+\_\+food\+\_\+reading,  }\item[{double}]{right\+\_\+food\+\_\+reading }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Determine the speed of both wheels based upon the robots proximity to the food and the light. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em left\+\_\+light\+\_\+reading} & -\/ reading for light sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+light\+\_\+reading} & -\/ reading for light sensor on the right \\
+\hline
+\mbox{\tt in}  & {\em left\+\_\+food\+\_\+reading} & -\/ reading for food sensor on the left \\
+\hline
+\mbox{\tt in}  & {\em right\+\_\+food\+\_\+reading} & -\/ reading for food sensor on the right \\
+\hline
+\mbox{\tt out}  & {\em The} & proper wheel velocities \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{fear_8h}{fear.\+h}}\item 
+src/\mbox{\hyperlink{fear_8cc}{fear.\+cc}}\end{DoxyCompactItemize}
