@@ -1,7 +1,7 @@
-#README
+# README
 @copyright 2018 Antonio Dimitrov, All rights reserved
 
-##Technical Introduction
+## Technical Introduction
 
 This program creates a robot simulation, in which
 an autonomous robot moves around a 2D world. The robot moves based upon
@@ -12,7 +12,7 @@ library creates the 2D graphics window that the arena lives in and
 animates both the entities and the environment using a continuous
 control loop.
 
-###Model-View-Controller
+### Model-View-Controller
 
 This software follows the model-view-
 controller(MVC) design pattern, which corresponds to three primary
@@ -42,7 +42,7 @@ GraphicsArenaViewer which would in turn call a method of the controller
 class, which then would decide what method is best to call in the Arena
 class.
 
-###Entities
+### Entities
 
 As mentioned previously there are multiple entities that exist
 within the simulation. The three entities are as follows: Robot, Light,
@@ -105,14 +105,14 @@ attribute of the robot class called has_hunger_. This attribute will be
 set to false and the hunger time will not be a factor if the arena has
 no food.
 
-##General Introduction 
+## General Introduction 
 
 This robot simulations is used to exhibit the
 reaction of different types of robots to lights. The robots have a
 behavior, either fear or explore, and a hunger level. Robots also react
 to food in different ways depending on the hunger level.
 
-###Graphical User Interface (GUI) 
+### Graphical User Interface (GUI) 
 
 The simulation is laid out in a simple
 fashion. In the far right of the screen there is a toggle menu. At the
@@ -140,7 +140,7 @@ be explained in further detail in the next section. The robots and
 lights are randomly sized within a certain range while the food is
 always the same size.
 
-###How the Simulation Works
+### How the Simulation Works
 
 The robots move autonomously based upon the
 behavior they exhibit and their hunger level. There are three stages of
